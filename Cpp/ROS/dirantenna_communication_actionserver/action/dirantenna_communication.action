@@ -1,0 +1,13 @@
+#goal definition
+uint8 startByte
+---
+#result definition
+bool success
+string[] strId_Mote
+uint16[] rssCount_Mote
+float64[] rssVals
+---
+#feedback definition
+string[] strId_Mote
+uint16[] rssCount_Mote
+float64[] rssVals

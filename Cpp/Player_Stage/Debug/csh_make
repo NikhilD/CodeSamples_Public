@@ -1,0 +1,3 @@
+rm -f Follow
+rm -f *.o
+make all clean

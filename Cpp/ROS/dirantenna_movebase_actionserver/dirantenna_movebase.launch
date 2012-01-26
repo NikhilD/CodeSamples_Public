@@ -1,0 +1,6 @@
+<launch>
+
+  <!-- Launch Directional Antenna MoveBase actionserver-->
+  <node name="dirantenna_movebase" pkg="dirantenna_movebase_actionserver" type="dirantenna_movebase_actionserver" output="screen" />
+  
+</launch>

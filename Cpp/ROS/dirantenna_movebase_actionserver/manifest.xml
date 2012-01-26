@@ -1,0 +1,21 @@
+<package>
+  <description brief="dirantenna_movebase_actionserver">
+
+     dirantenna_movebase_actionserver
+
+  </description>
+  <author>CRIM</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dirantenna_movebase_actionserver</url>
+  <depend package="actionlib"/>
+  <depend package="roscpp"/>
+  <depend package="roslib"/>
+  <depend package="actionlib_msgs"/>
+  <depend package="common_rosdeps"/>
+  <depend package="geometry_msgs"/>
+  <depend package="tf"/>
+
+</package>
+
+

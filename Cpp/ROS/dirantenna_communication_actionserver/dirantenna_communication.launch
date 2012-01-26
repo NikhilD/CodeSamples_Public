@@ -1,0 +1,9 @@
+<launch>
+
+  <!-- Launch Directional Antenna Communication actionserver-->
+  <node name="dirantenna_comms" pkg="dirantenna_communication_actionserver" type="dirantenna_communication_actionserver" output="screen">
+    <param name="serialPorts" value="basestn,leftstn,rightstn,frontstn" type="str" />
+	<param name="numMotes" value="4" type="int" />
+  </node>
+  
+</launch>

@@ -1,0 +1,11 @@
+#goal definition
+float64[] twistTravel
+---
+#result definition
+bool success
+float64 distance
+float64 angle
+---
+#feedback definition
+float64 distance
+float64 angle

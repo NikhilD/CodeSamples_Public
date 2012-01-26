@@ -1,0 +1,15 @@
+<launch>
+
+  <!-- Launch Directional Antenna Communication actionserver-->
+  <node name="dirantenna_communication_actionserver" pkg="dirantenna_communication_actionserver" type="dirantenna_communication_actionserver" output="screen">
+    <param name="serialPorts" value="netMote5,netMote35" type="str" />
+	<param name="numMotes" value="2" type="int" />
+  </node>
+  
+  <!-- Launch Directional Antenna MoveBase actionserver-->
+  <node name="dirantenna_movebase_actionserver" pkg="dirantenna_movebase_actionserver" type="dirantenna_movebase_actionserver" output="screen" />
+  
+  <!-- Launch Directional Antenna Navigation actionclient-->
+  <node name="dirantenna_navigation_actionclient" pkg="dirantenna_navigation_actionclient" type="dirantenna_navigation_actionclient" output="screen" />
+  
+</launch>

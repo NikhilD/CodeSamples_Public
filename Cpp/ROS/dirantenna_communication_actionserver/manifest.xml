@@ -1,0 +1,19 @@
+<package>
+  <description brief="dirantenna_communication_actionserver">
+
+     dirantenna_communication_actionserver
+
+  </description>
+  <author>CRIM</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dirantenna_communication_actionserver</url>
+  <depend package="actionlib"/>
+  <depend package="roscpp"/>
+  <depend package="roslib"/>
+  <depend package="actionlib_msgs"/>
+  <depend package="common_rosdeps"/>
+
+</package>
+
+

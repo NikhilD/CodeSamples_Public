@@ -1,0 +1,5 @@
+Project name : Empty_Project
+
+5.3.0.0.et of Renesas M16C Standard Toolchain was upgraded to
+    5.30.02 of Renesas M16C Standard Toolchain.
+

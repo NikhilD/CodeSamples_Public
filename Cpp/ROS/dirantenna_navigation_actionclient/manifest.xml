@@ -1,0 +1,22 @@
+<package>
+  <description brief="dirantenna_navigation_actionclient">
+
+     dirantenna_navigation_actionclient
+
+  </description>
+  <author>CRIM</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dirantenna_navigation_actionclient</url>
+  <depend package="actionlib"/>
+  <depend package="roscpp"/>
+  <depend package="roslib"/>
+  <depend package="actionlib_msgs"/>
+  <depend package="common_rosdeps"/>
+  <depend package="dirantenna_communication_actionserver"/>
+  <depend package="dirantenna_movebase_actionserver"/>
+  <depend package="geometry_msgs"/>
+
+</package>
+
+

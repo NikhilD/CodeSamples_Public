@@ -1,0 +1,104 @@
+# defines robot model
+include "CRIM_Bot.inc"
+
+# defines 'map' object
+include "map.inc"
+
+# defines laser model
+include "sick.inc"
+
+# size of the world in meters
+size [16 16]
+
+# set the resolution of the underlying raytrace/friis model in meters
+resolution 0.02
+
+interval_sim 100
+interval_real 100
+
+# configure the GUI window
+window
+( 
+  size [ 695.000 693.000 ] 
+  center [-0.010 -0.040] 
+  scale 0.028 
+)
+
+# load an environment bitmap
+map
+(
+  bitmap "../../bitmaps/rink.png"
+  size [16 16]
+
+  pose [0 0 0]
+  name "map"
+)
+
+# initialize the robots
+crimbot
+(
+  name "robot00"
+  color "gray"
+  pose [4 4 225]
+  sick_laser(range_max 2 fov 360)
+  wifi(
+      ip "192.168.0.2"
+      mac "08:00:20:ae:fd:00"
+      essid "test network"
+	  model "raytrace"
+#	  model "friis"	
+      power 3
+      sensitivity -95
+      range_db -95
+      plc 80
+      sigma 12
+      wall_factor 50
+  )
+  watchdog_timeout -1.0
+)
+
+# initialize the robots
+crimbot
+(
+  name "robot01"
+  color "red"
+  pose [0 -2 0]
+  sick_laser(range_max 2 fov 360)
+  wifi(
+      ip "192.168.0.4"
+      mac "08:00:20:ae:fd:01"
+      essid "test network"
+	  model "raytrace"
+#	  model "friis"
+      power 3
+      sensitivity -95
+      range_db -95
+      plc 80
+      sigma 12
+      wall_factor 50
+  )
+  watchdog_timeout -1.0
+)
+
+# initialize the robots
+crimbot
+(
+  name "robot02"
+  color "black"
+  pose [-4 -4 90]
+  sick_laser(range_max 2 fov 360)
+  wifi(
+      ip "192.168.0.6"
+      mac "08:00:20:ae:fd:02"
+      essid "test network"
+	  model "raytrace"
+#	  model "friis"
+      power 3
+      sensitivity -95
+      range_db -95
+      plc 80
+      sigma 12
+      wall_factor 50
+  )
+  watchdog_timeout -1.0
+)
