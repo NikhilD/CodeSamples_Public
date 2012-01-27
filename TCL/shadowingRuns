@@ -1,0 +1,29 @@
+#!/bin/sh
+echo "Running Experiments..."
+numPle=$1		# get arguments from command line
+numRuns=$5		# $1=1st Arg., $2=2nd Arg.
+pleStart=$2		
+numSigma=$3
+sigmaStart=$4
+#numRuns=number of expts.
+
+pleLst=(2 3 4 6)
+sigmaLst=(3 6 8 10 12)
+nodeLst=(200 400 600 800 1000)	
+
+for (( i = $pleStart; i < $numPle; i++ ))
+do
+	nodeVal=200
+	canvas=800
+	ple=${pleLst[$i]}
+	for ((j = $sigmaStart; j < $numSigma; j++))
+	do
+		sigma=${sigmaLst[$j]}
+		for (( k = 1; k <= $numRuns; k++ ))
+		do
+			ns Hop-Dist-shadowing.tcl $canvas $nodeVal $ple $sigma $k
+		done
+	done
+done
+
+

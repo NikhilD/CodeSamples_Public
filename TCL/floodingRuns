@@ -1,0 +1,25 @@
+#!/bin/sh
+echo "Running Experiments..."
+numLst=$1		# get arguments from command line
+numRuns=$2		# $1=1st Arg., $2=2nd Arg.
+# numLst <= length(nodeLst)
+# Doing 30 expts.
+nodeLst=(200 400 600 800 1000)	
+
+for (( i = 0; i < $numLst; i++ ))
+do
+	nodeVal=${nodeLst[$i]}
+	if test $nodeVal -eq ${nodeLst[0]}
+	then
+	canvas=900
+	else
+	canvas=1100
+	fi
+	#echo "Canvas = $canvas"
+	for (( j = 1; j <= $numRuns; j++ ))
+	do
+		ns HopCt-flooding.tcl $canvas $nodeVal $j
+	done
+done
+
+
